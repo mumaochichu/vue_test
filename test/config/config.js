@@ -8,7 +8,7 @@ window.arcCssUrl = "http://localhost:1570/arcgis_js_v314_api/arcgis_js_api/libra
 window.sessionStorage='';
 //地图
 window.map;
-//选中图层
+//选中的图层
 window.checkedLayers=[2,21,22,3]
 //
 window.VUE_APP_TAGCONFIG_PATH = 'ws://***.***.***.***:***'
