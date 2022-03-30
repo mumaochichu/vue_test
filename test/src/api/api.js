@@ -6,7 +6,6 @@ axios.defaults.baseURL="/api"
 // post请求类型
 axios.defaults.headers.post['Content-Type']='application/json';
 
-//let base='http://121.37.131.225:80'  //服务器API地址
 let base='https://localhost:44328'   //本地运行API地址
 //let base='https://localhost:8081'  
 //let base='http://127.0.0.1:80'         //本地IIS发布API地址    
