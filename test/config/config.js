@@ -11,4 +11,4 @@ window.map;
 //选中图层
 window.checkedLayers=[2,21,22,3]
 //
-window.VUE_APP_TAGCONFIG_PATH = 'ws://221.214.110.227:32121'
+window.VUE_APP_TAGCONFIG_PATH = 'ws://***.***.***.***:***'
