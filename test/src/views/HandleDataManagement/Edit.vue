@@ -265,7 +265,6 @@ export default {
       let name_p = this.editForm.Attachment.substring(index + 1, this.editForm.Attachment.length);
       this.fileList.push({
         name: name_p,
-        //url: "http://121.37.131.225:80/" + this.editForm.Attachment       //服务器发布使用
         url: "http://localhost:8083/API/API/" + this.editForm.Attachment   //本地运行使用
         //url: "http://127.0.0.1:80/" + this.editForm.Attachment               //本地IISAPI使用
       })
