@@ -1,0 +1,50 @@
+/* 弹窗样式 开始 */
+
+.vl-notify.vl-notify-alert h2.vl-notice-title {
+  background-color: rgba(8,79,144, 0.9) !important;
+  height: 32px !important;
+  line-height: 32px !important;
+  color: white !important;
+}
+.vl-notify.vl-notify-main{
+  border: none !important;
+}
+
+/* 放大缩小关闭按钮样式 */
+
+.vlicon-mini:before,
+.vlicon-max:before,
+.vl-notify.vl-notify-alert h2.vl-notice-title .icon-remove:before,
+.el-icon-close:before {
+    color: white;
+}
+
+/*地图弹窗样式*/
+.map-info-label2{
+  overflow: hidden; 
+  white-space: nowrap; 
+  text-overflow: ellipsis;
+  width:90%;
+  height:20px;
+  background-color:white; 
+  cursor: pointer;
+}
+
+/*自定义按钮*/
+.el-icon-play{
+  background: url(../assets/images/播放.png) center no-repeat;
+  background-size: cover;
+}
+.el-icon-pause{
+  background: url(../assets/images/暂停.png) center no-repeat;
+  background-size: cover;
+}
+.el-icon-replay{
+  background: url(../assets/images/重播.png) center no-repeat;
+  background-size: cover;
+}
+
+.el-icon-play:before,.el-icon-pause:before,.el-icon-replay:before{
+  content: "替";
+  visibility: hidden;
+}
