@@ -95,7 +95,6 @@ export default {
     this.detailForm = this.info.model
     if (this.detailForm.Attachment) {
       this.attach_exist=true
-      //this.url="http://121.37.131.225:80/"+this.detailForm.Attachment         //服务器发布使用
       this.url= "http://localhost:8083/API/API/" +this.detailForm.Attachment  //本地运行使用
       //this.url = "http://127.0.0.1:80/" + this.detailForm.Attachment              //本地IISAPI使用
       this.srcList.push(this.url)
