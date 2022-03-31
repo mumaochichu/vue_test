@@ -25,6 +25,7 @@
     "js-cookie": "^3.0.0",
     "less-loader": "^5.0.0",
     "lodash": "^4.17.21",
+    "normalize.css": "^8.0.1",
     "qs": "^6.10.1",
     "vue": "^2.5.2",
     "vue-aliplayer": "^1.0.0",

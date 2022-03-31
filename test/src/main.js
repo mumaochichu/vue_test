@@ -20,6 +20,7 @@ import esriLoader from 'esri-loader'
 import MAP from '../config/config'
 import bus from '../util/bus.js'
 import earth from "./js/CesiumEarth.js";
+import './css/base.css'    //初始化CSS样式
 // import "../src/js/lib/aliplayer-2.9.3/aliplayer-h5-min.js"
 // import "../src/js/lib/aliplayer-2.9.3/aliplayer-hls-min.js"
 

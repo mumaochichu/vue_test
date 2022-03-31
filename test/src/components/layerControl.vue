@@ -37,7 +37,7 @@ export default {
         label: '模拟实时数据监测',
         excutScript: 'checkedMONITOR'
       }
-        //,{
+        // ,{
         //   id:4,
         //   label:'点聚合图层',
         //   excutScript: 'checkedCLUSTER'

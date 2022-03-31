@@ -37,7 +37,4 @@ div{
   top:10px;
   position: absolute;
 }
-.out_bt {
-  float: right; 
-}
 </style>

@@ -6,15 +6,16 @@
              text-color="#fff"
              active-text-color="#ffd04b"
              mode="horizontal">
-      <template v-for="item in NavigateItem">
+      <template v-for="item in NavigateItems">
         <!-- v-if条件渲染：如果出事渲染条件为假，则什么也不做，直到条件第一次变为真时，才会开始渲染条件块 -->
         <!-- v-show:不管初始条件是什么，元素总是会被渲染，并且只是简单地基于CSS的"display"属性进行切换 -->
         <!-- v-if 指令开销较大，所以更适合条件不经常改变的场景。而 v-show 指令适合条件频繁切换的场景 -->
+        <!-- 包含子菜单的项 -->
         <el-submenu v-if="item.items.length"
                     :index="item.key"
                     :key="item.key">
           <template slot="title">
-            <img :src="require('../assets/images/'+item.icon+'.png')"
+            <img  :src="require('../assets/images/'+item.icon+'.png')"
                  :alt="item.title" />
             {{ item.title }}
           </template>
@@ -24,6 +25,7 @@
             {{ items.title }}
           </el-menu-item>
         </el-submenu>
+        <!-- 不包含子菜单的项 -->
         <el-menu-item v-else
                       :index="item.key"
                       :key="item.key">
@@ -58,6 +60,14 @@ export default {
       default: '',
     },
     content: String,
+  },
+  computed:{
+    //这里可以提前筛选要显示的项
+    NavigateItems:function(){
+      return this.NavigateItem.filter(function(item){
+        return item!=null
+      })
+    }
   },
   //data已初始化，计算属性、event/watch事件回调，但dom树并未挂载(在模板渲染成html前调用，即通常初始化某些属性值，然后再渲染成视图)
   created () {

@@ -311,7 +311,7 @@ export default {
                       var html2 = ""
                       html2 =
                         '<div id="' + this.dataList_rlt[i].Id +
-                        '" class="mapWindow_monitor" style="display:none;width:250px;position: absolute;z-index: 200;left: 10px; top: -20px;opacity: 0.8;">' +
+                        '" class="mapWindow_monitor" style="display:block;width:250px;position: absolute;z-index: 200;left: 10px; top: -20px;opacity: 0.8;">' +
                         '<div style="background-image: url(' + arrow_png + ');background-repeat: no-repeat;background-position: center;float: left;width: 11px; height: 31px;z-index: 2;">' +
                         '</div>' +
                         '<div class="mapWindow_monitor_body" style=" float: left; background-color: #00457b;bottom: 10px;top: 0px;left: 0px;right: 0px;z-index: 2;border: 1px solid #7597ba;border-radius: 7%;box-shadow: 0px 2px 5px #888888;padding: 2px;">' +

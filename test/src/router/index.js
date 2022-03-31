@@ -28,7 +28,7 @@ const router = new Router({
           path: "helloworld",
           component: resolve => require(["../components/HelloWorld"], resolve)
         }
-      ]
+      ],
     },
     //登录页面
     {

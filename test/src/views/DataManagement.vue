@@ -2,12 +2,12 @@
   <section style="overflow: hidden; height: 100%;">
     <span ref="app">{{name}}</span>
     <!--查询与新增-->
-    <el-form :inline="true"
-             style="float: right; height: 10%;margin-top: 1%;"
+      <!-- style="float: right; height: 10%;margin-top: 1%;" -->
+    <el-form :inline="true"      
              size="mini"
              class="serchFrom">
       <el-form-item>
-        <label>名称：</label>
+       <label>名称：</label>
         <el-input v-model="query"
                   style="width: 150px;"
                   placeholder="请输入名称"></el-input>
@@ -33,7 +33,7 @@
               :cell-style="{'text-align': 'center'}"
               size="mini"
               height="80%"
-              style="width: 100%">
+              style="width: 100%;">
       <el-table-column type="index"
                        label="序号"> </el-table-column>
       <el-table-column prop="Name"
@@ -131,7 +131,7 @@ export default {
   //计算属性：描述的一个值依赖于其它值，依赖的值改变后重新计算结果更新DOM(用来监控自己定义的变量，该变量不在data里面声明，直接在computed里面定义，然后就可以在页面上进行双向数据绑定展示出结果或者用作其他处理)
   computed: {
     //辅助函数，和下面注释掉的内容是相同的效果
-    ...mapState(['iotData']),   
+    ...mapState(['iotData']),
     // iotData () {
     //   return this.$store.state.iotData
     // },
@@ -573,7 +573,7 @@ export default {
     // var map=new Map()
     //  arr.forEach(item => map.set(item));
     //  console.log(map)
-    
+
     //var iotData = this.formatedData
   },
   //数据有被更新调用
@@ -607,3 +607,11 @@ export default {
 
 }
 </script>
+<style>
+.serchFrom{
+  display: flex;                /*采用flex布局 */
+  flex-direction: row;          /*主轴方向（即项目排列方向）。值有row（主轴为水平方向，起点在左端）、row-reverse（主轴为水平方向，起点在右端）、column(主轴为垂直方向，起点在上沿)、column-reverse（主轴为垂直方向，起点在下沿）*/
+  flex-wrap:nowrap;             /*定义项目在一条轴线上排不下如何换行。值有nowrap（不换行）、wrap（换行，第一行在上方）、wrap-reverse（换行，第一行在下方）*/
+  justify-content: flex-end;    /*定义项目在主轴上的对齐方式。值有flex-start（左对齐）、flex-end（右对齐）、center（居中）、space-betwen（两端对齐，项目之间的间隔都相等）、space-around（每个项目两侧的间隔相等）*/   
+}
+</style>

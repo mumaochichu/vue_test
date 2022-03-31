@@ -4,7 +4,7 @@ import { Message, MessageBox } from "element-ui";
 export const localSocket = self => {
   if ("WebSocket" in window) {
     if (!glSocket) {
-      glSocket = new WebSocket("ws://LAPTOP-EBM601UB:8088/");
+      glSocket = new WebSocket(window.DATA_PATH);
       glSocket.binaryType = "arraybuffer";
       glSocket.onopen = () => {
         //websocket连接
@@ -42,7 +42,9 @@ export const localSocket = self => {
         //   localSocket();
         // }, 2000);
       };
+      //用于指定收到服务器数据后的回调函数
       glSocket.onmessage = msg => {
+        glSocket.send(111);
         //websocket接受信息
         let d = JSON.stringify(msg.data);
         //dispatch异步(执行store里面action里的方法),commit同步(执行store里面mutations里的方法)
