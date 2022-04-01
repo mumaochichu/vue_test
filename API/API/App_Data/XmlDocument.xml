@@ -546,13 +546,14 @@
             数据管理
             </summary>
         </member>
-        <member name="M:API.Controllers.Log4NetController.GetAsync(System.Int32,System.Int32,System.String)">
+        <member name="M:API.Controllers.Log4NetController.GetAsync(System.Int32,System.Int32,System.String,System.String)">
              <summary>
              获取日志(分页)
              </summary>
             <param name="page">当前页数</param>
             <param name="intPageSize">每页显示数据条数</param>
             <param name="key">查询条件</param>
+            <param name="select">下拉框条件</param>
         </member>
         <member name="M:API.Controllers.MD5Helper.GetMd5String(System.String)">
             <summary>

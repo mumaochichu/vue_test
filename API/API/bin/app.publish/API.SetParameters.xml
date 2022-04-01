@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <setParameter name="IIS Web Application Name" value="Default Web Site/API_deploy" />
+  <setParameter name="DefaultConnection-Web.config Connection String" value="server=localhost;user id=root;password=12345;persistsecurityinfo=True;database=vue_test" />
+  <setParameter name="DBConnection-Web.config Connection String" value="server=localhost;user id=root;password=12345;database=vue_test; pooling=true;" />
+</parameters>

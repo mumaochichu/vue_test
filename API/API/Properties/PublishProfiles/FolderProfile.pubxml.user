@@ -4,11 +4,11 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
 -->
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
-    <_PublishTargetUrl>D:\Project\API\API\bin\app.publish\</_PublishTargetUrl>
+    <_PublishTargetUrl>D:\github_upload\load\API\API\bin\app.publish</_PublishTargetUrl>
   </PropertyGroup>
   <ItemGroup>
     <File Include="App_Data/XmlDocument.xml">
-      <publishTime>03/08/2022 09:25:57</publishTime>
+      <publishTime>03/31/2022 17:58:52</publishTime>
     </File>
     <File Include="Areas/HelpPage/HelpPage.css">
       <publishTime>07/14/2021 08:51:53</publishTime>
@@ -80,10 +80,10 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>09/10/2013 16:29:20</publishTime>
     </File>
     <File Include="bin/API.dll">
-      <publishTime>03/08/2022 09:42:32</publishTime>
+      <publishTime>04/01/2022 10:54:25</publishTime>
     </File>
     <File Include="bin/API.pdb">
-      <publishTime>03/08/2022 09:42:32</publishTime>
+      <publishTime>04/01/2022 10:54:25</publishTime>
     </File>
     <File Include="bin/BouncyCastle.Crypto.dll">
       <publishTime>01/31/2019 19:53:56</publishTime>
@@ -105,6 +105,12 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
     </File>
     <File Include="bin/K4os.Hash.xxHash.dll">
       <publishTime>07/03/2019 20:39:02</publishTime>
+    </File>
+    <File Include="bin/log4net.config">
+      <publishTime>04/01/2022 10:54:07</publishTime>
+    </File>
+    <File Include="bin/log4net.dll">
+      <publishTime>12/17/2021 10:45:06</publishTime>
     </File>
     <File Include="bin/Microsoft.AspNetCore.Authentication.Abstractions.dll">
       <publishTime>11/12/2018 17:29:06</publishTime>
@@ -607,6 +613,9 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
     <File Include="Img/web.config">
       <publishTime>08/05/2021 13:52:17</publishTime>
     </File>
+    <File Include="log4net.config">
+      <publishTime>04/01/2022 10:54:07</publishTime>
+    </File>
     <File Include="Scripts/bootstrap.js">
       <publishTime>07/14/2021 08:51:44</publishTime>
     </File>
@@ -695,7 +704,7 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>07/14/2021 08:51:37</publishTime>
     </File>
     <File Include="Web.config">
-      <publishTime>03/08/2022 09:42:34</publishTime>
+      <publishTime>04/01/2022 10:54:25</publishTime>
     </File>
   </ItemGroup>
 </Project>

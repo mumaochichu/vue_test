@@ -474,3 +474,4 @@ D:\github_upload\load\API\API\obj\Debug\API.csproj.CoreCompileInputs.cache
 D:\github_upload\load\API\API\obj\Debug\API.csproj.CopyComplete
 D:\github_upload\load\API\API\obj\Debug\API.dll
 D:\github_upload\load\API\API\obj\Debug\API.pdb
+D:\github_upload\load\API\API\obj\Debug\API.csprojAssemblyReference.cache

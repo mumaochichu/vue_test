@@ -33,12 +33,17 @@ namespace API.Controllers
         ///<param name="page">当前页数</param>
         ///<param name="intPageSize">每页显示数据条数</param>
         ///<param name="key">查询条件</param>
-        public async Task<MessageModel<object>> GetAsync(int page = 1, int intPageSize = 10, string key = "")
+        ///<param name="select">下拉框条件</param>
+        public async Task<MessageModel<object>> GetAsync(int page = 1, int intPageSize = 10, string key = "",string select="")
         {
             Expressionable<Log4net> exp = Expressionable.Create<Log4net>();
             if (!string.IsNullOrEmpty(key))
             {
                 exp.And(it => it.log_message.Contains(key));
+            }
+            if (!string.IsNullOrEmpty(select))
+            {
+                exp.And(it => it.log_message.Contains(select));
             }
             RefAsync<int> total = 0;
             var result = await DbContext.Queryable<Log4net>()

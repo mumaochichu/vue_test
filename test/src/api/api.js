@@ -111,3 +111,12 @@ export const uploadFile=params=> {
   return axios.post(`${base}/api/Img/PostAttachFiles`,params,{headers:{"Content-Type": "application/x-www-form-urlencoded;charset=utf-8"}})
  }
 
+ /**
+ * 获取日志数据（分页）
+ * @param {*} params 
+ * @returns 
+ */
+export const getLogData = params => {
+  return axios.get(`${base}/api/Log4Net/GetAsync`,{ params: params });
+};
+
