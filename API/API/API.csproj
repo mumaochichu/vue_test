@@ -65,6 +65,9 @@
     <Reference Include="K4os.Hash.xxHash, Version=1.0.6.0, Culture=neutral, PublicKeyToken=32cd54395057cec3, processorArchitecture=MSIL">
       <HintPath>..\packages\K4os.Hash.xxHash.1.0.6\lib\net46\K4os.Hash.xxHash.dll</HintPath>
     </Reference>
+    <Reference Include="log4net, Version=2.0.14.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
+      <HintPath>..\packages\log4net.2.0.14\lib\net45\log4net.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.AspNetCore.Authentication.Abstractions, Version=2.2.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.AspNetCore.Authentication.Abstractions.2.2.0\lib\netstandard2.0\Microsoft.AspNetCore.Authentication.Abstractions.dll</HintPath>
     </Reference>
@@ -400,6 +403,7 @@
     <Compile Include="Controllers\Helper.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ImgController.cs" />
+    <Compile Include="Controllers\Log4NetController.cs" />
     <Compile Include="Controllers\MD5Helper.cs" />
     <Compile Include="Controllers\MenuController.cs" />
     <Compile Include="Controllers\UserinfoController.cs" />
@@ -409,6 +413,7 @@
     </Compile>
     <Compile Include="Models\AttachFileModles.cs" />
     <Compile Include="Models\Data.cs" />
+    <Compile Include="Models\Log4net.cs" />
     <Compile Include="Models\Menu.cs" />
     <Compile Include="Models\MessageModel.cs" />
     <Compile Include="Models\PageModel.cs" />
@@ -447,6 +452,9 @@
     <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\ApiGroup.cshtml" />
     <Content Include="Areas\HelpPage\Views\Help\Api.cshtml" />
     <Content Include="Img\web.config" />
+    <Content Include="log4net.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />
@@ -486,6 +494,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Views\Data\" />
+    <Folder Include="Views\Log4Net\" />
     <Folder Include="Views\Menu\" />
     <Folder Include="Views\Userinfo\" />
   </ItemGroup>

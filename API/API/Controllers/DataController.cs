@@ -126,6 +126,8 @@ namespace API.Controllers
             {
                 data.response = id.ToString();
                 data.msg = "添加成功";
+                log4net.ILog log = log4net.LogManager.GetLogger("MyLogger");
+                log.Info("Data"+"-"+"Add"+"-"+request.Id);
             }
             return data;
         }
@@ -147,6 +149,8 @@ namespace API.Controllers
                 {
                     data.msg = "更新成功";
                     data.response = id.ToString();
+                    log4net.ILog log = log4net.LogManager.GetLogger("MyLogger");
+                    log.Info("Data" + "-" + "Edit" + "-" + request.Id);
                 }
             }
             return data;
@@ -166,6 +170,8 @@ namespace API.Controllers
             {
                 data.msg = "删除成功";
                 data.response = id.ToString();
+                log4net.ILog log = log4net.LogManager.GetLogger("MyLogger");
+                log.Info("Data" + "-" + "Delete" + "-" + Id);
             }
             return data;
         }

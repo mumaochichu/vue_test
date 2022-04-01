@@ -541,6 +541,19 @@
             </summary>
             <returns></returns>
         </member>
+        <member name="T:API.Controllers.Log4NetController">
+            <summary>
+            数据管理
+            </summary>
+        </member>
+        <member name="M:API.Controllers.Log4NetController.GetAsync(System.Int32,System.Int32,System.String)">
+             <summary>
+             获取日志(分页)
+             </summary>
+            <param name="page">当前页数</param>
+            <param name="intPageSize">每页显示数据条数</param>
+            <param name="key">查询条件</param>
+        </member>
         <member name="M:API.Controllers.MD5Helper.GetMd5String(System.String)">
             <summary>
             对字符串进行MD5运算
@@ -648,6 +661,21 @@
         <member name="P:API.Models.Data.UpdateTime">
             <summary>
             更新时间
+            </summary>
+        </member>
+        <member name="T:API.Models.Log4net">
+            <summary>
+            日志类
+            </summary>
+        </member>
+        <member name="P:API.Models.Log4net.Id">
+            <summary>
+            主键Id
+            </summary>
+        </member>
+        <member name="P:API.Models.Log4net.log_datetime">
+            <summary>
+            记录时间
             </summary>
         </member>
         <member name="T:API.Models.Menu">
