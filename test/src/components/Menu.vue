@@ -38,7 +38,7 @@
 
 <script>
 import MapQuery from '../views/MapQuery.vue'
-import ThematicMap from '../views/ThematicMap.vue'
+import PathMap from '../views/PathMap.vue'
 import DataManagement from '../views/DataManagement.vue'
 import DataStatistical from '../views/DataStatistical.vue'
 import DataMonitor from '../views/DataMonitor.vue'
@@ -118,11 +118,11 @@ export default {
         case "1002":
           this.$layer.iframe({
             content: {
-              content: ThematicMap,
+              content: PathMap,
               parent: this,
             },
             area: ["550px", "570px"],
-            title: "专题图",
+            title: "轨迹图",
             maxmin: true,
             shade: false,
             shadeClose: false,

@@ -8,7 +8,7 @@ axios.defaults.headers.post['Content-Type']='application/json';
 
 let base='https://localhost:44328'   //本地运行API地址
 //let base='https://localhost:8081'  
-//let base='http://127.0.0.1:80'         //本地IIS发布API地址    
+// let base='http://127.0.0.1:81'         //本地IIS发布API地址    
 // 请求延时（毫秒数，如果请求话费超过了'timeout'的时间，请求将被中断）
 axios.defaults.timeout = 100000
 //请求拦截器

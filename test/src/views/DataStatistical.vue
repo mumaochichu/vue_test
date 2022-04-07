@@ -101,6 +101,7 @@ export default {
           sums[index] = '总计';
           return;
         }
+        //改变数组中每条数据的内容，不会改变数组长度
         const values = data.map(item => Number(item[column.property]));
         if (!values.every(value => isNaN(value))) {
           sums[index] = values.reduce((prev, curr) => {

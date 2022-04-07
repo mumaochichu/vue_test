@@ -3,7 +3,7 @@
 </template>
 
 <script>
-import img from "../../dist/static/img/404.png"
+import img from "../../src/assets/images/404.png"
 export default {
    name: 'notFound',
   data(){

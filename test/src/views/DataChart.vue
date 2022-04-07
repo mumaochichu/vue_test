@@ -94,11 +94,16 @@ export default {
       var option = {
         //标题
         title: {
-          text: title,
+          text: title,    //主标题文本
+          //subtext:title,  //副标题文本
+          show:true,      //是否显示标题组件
+          textStyle:{     //主标题文本样式
+          },
+          //标题位置
           top: '10%',
           left: '20%'
         },
-        //图表位置
+        //图表
         grid: {
           left: 50,
           right: 130,
@@ -106,29 +111,31 @@ export default {
         },
         //图例
         legend: {
-          type: 'scroll',
-          orient: 'vertical',
+          type: 'scroll',     //图例类型。plain：普通图例。scroll：可滚动翻页图例
+          orient: 'vertical', //图例列表布局朝向。horizontal：水平。vertical：垂直。
           y: 'center',    //延Y轴居中
-          x: 'right', //居右显示
-          data: this.XLabel,
-          tooltip: {
-            show: true
+          x: 'right',     //居右显示
+          data: this.XLabel,  //图例的数据数组
+          tooltip: {          //提示框
+            show: true      
           },
-          align: 'left',
-          selected: this.XLabel.selected,
-          formatter: function (name) {
+          align: 'left',      //图例标记和文本的对齐
+          selected: this.XLabel.selected,    //图例选中状态表
+          formatter: function (name) {       //格式化图例文本
             return name.length > 10 ? name.substr(0, 10) + "..." : name;
           }
         },
         //提示框
         tooltip: {
-          trigger: 'axis', //触发类型，axis为坐标轴触发，主要在柱状图，折线图等会使用类目轴的图表中使用
-          axisPointer: {            // 坐标轴指示器，坐标轴触发有效
-            type: 'shadow'        // 默认为直线，可选为：'line' | 'shadow'| 'none'
+          trigger: 'axis',         //触发类型，axis为坐标轴触发，主要在柱状图，折线图等会使用类目轴的图表中使用
+          axisPointer: {           // 坐标轴指示器，坐标轴触发有效
+            type: 'shadow'         // 默认为直线，可选为：'line' | 'shadow'| 'none'
           },
           //自定义提示框内容
           formatter: function (params) {
-            return ("类型：" + params[0].name + "</br>" + "数量：" + params[0].value + "</br>" + "占比：" + (params[0].value / count * 100).toFixed(2) + "%")
+            return ("<table  border='1' cellspacing='0'>"+"<tr><th style='color:rgb(31, 95, 154)'>类型：</th>" +"<th>"+ params[0].name + "</th></tr>" +
+             "<tr><th style='color:rgb(31, 95, 154)'>数量：</th>" +"<th>"+ params[0].value + "</th></tr>" + 
+             "<tr><th style='color:rgb(31, 95, 154)'>占比：</th>" +"<th>"+ (params[0].value / count * 100).toFixed(2) + "%"+"</th></tr></table>")
           }
         },
         //工具栏
@@ -136,37 +143,23 @@ export default {
           show: true,
           right: '30%',
           feature: {
-            // dataZoom: {
-            //   yAxisIndex: 'none'
-            // },
-            //dataView: { readOnly: false },
-            //magicType: { type: ['line', 'bar'] },
-            //restore: {},
-            saveAsImage: {
+            magicType: { type: ['line', 'bar'] },  //折线图/柱状图
+            saveAsImage: {              //保存为图片
               type: 'png',
               name: title || "数据统计"
             },
-            // myEnlarge: {//自定义按钮必须以my开头
-            //   show: true,
-            //   title: '数据视图',
-            //   icon: 'path://M432.45,595.444c0,2.177-4.661,6.82-11.305,6.82c-6.475,0-11.306-4.567-11.306-6.82s4.852-6.812,11.306-6.812C427.841,588.632,432.452,593.191,432.45,595.444L432.45,595.444z M421.155,589.876c-3.009,0-5.448,2.495-5.448,5.572s2.439,5.572,5.448,5.572c3.01,0,5.449-2.495,5.449-5.572C426.604,592.371,424.165,589.876,421.155,589.876L421.155,589.876z M421.146,591.891c-1.916,0-3.47,1.589-3.47,3.549c0,1.959,1.554,3.548,3.47,3.548s3.469-1.589,3.469-3.548C424.614,593.479,423.062,591.891,421.146,591.891L421.146,591.891zM421.146,591.891',
-            //   onclick: function () {
-            //     console.log(this.chart)
-            //   }
-            // }
-
           }
         },
         //x轴
         xAxis: {
           name: '类别',
-          triggerEvent: true,
+          triggerEvent: true,  //坐标轴标签是否触发鼠标事件
           type: 'category',
           splitLine: {
-            show: false
+            show: false        //是否显示分割线
           },
           axisLabel: this.axisLabel,
-          data: this.XLabel,
+          data: this.XLabel,     //x轴数据
         },
         //y轴
         yAxis: {
@@ -176,9 +169,6 @@ export default {
           splitLine: {
             show: false
           },
-          // axisLabel: {
-          //   formatter: '{value} %'
-          // }
         },
         //系列列表,每个系列通过 type 决定自己的图表类型
         series: this.pieData,

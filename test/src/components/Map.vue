@@ -47,6 +47,7 @@ export default {
         let result = []
         if (!oldval.length) result = newval
         else {
+          //过滤数组，改变数组长度，不会改变每一条数据的内容
           result = newval.filter(item => {
             let obj = oldval.find(a => a.Id == item.Id && a.Num != item.Num)
             // if(obj){
@@ -311,7 +312,7 @@ export default {
                       var html2 = ""
                       html2 =
                         '<div id="' + this.dataList_rlt[i].Id +
-                        '" class="mapWindow_monitor" style="display:block;width:250px;position: absolute;z-index: 200;left: 10px; top: -20px;opacity: 0.8;">' +
+                        '" class="mapWindow_monitor" style="display:none;width:250px;position: absolute;z-index: 200;left: 10px; top: -20px;opacity: 0.8;">' +
                         '<div style="background-image: url(' + arrow_png + ');background-repeat: no-repeat;background-position: center;float: left;width: 11px; height: 31px;z-index: 2;">' +
                         '</div>' +
                         '<div class="mapWindow_monitor_body" style=" float: left; background-color: #00457b;bottom: 10px;top: 0px;left: 0px;right: 0px;z-index: 2;border: 1px solid #7597ba;border-radius: 7%;box-shadow: 0px 2px 5px #888888;padding: 2px;">' +
@@ -447,7 +448,7 @@ export default {
                 });
               }, 500, e)    //将参数e传递到setTimeout函数里
             })
-            //layer_monitor.setVisibility(false)
+            layer_monitor.setVisibility(false)
             //鼠标移入事件（打开弹窗）
             layer_monitor.on('mouse-over', (e) => {
               let id = e.graphic.attributes.Id
@@ -467,7 +468,7 @@ export default {
           map.disableKeyboardNavigation()
           //监听地图缩放事件
           map.on('extent-change', that.onExtentChange);
-          //监听鼠标移动事件（throttle节流函数，节流是持续触发事件，会每隔一段时间，才执行执行一次）
+          //监听鼠标移动事件（throttle节流函数，节流是持续触发事件，n秒内只会执行一次）
           map.on('mouse-move', _.throttle(that.mapMouseMove, 500));
         }).catch(err => {
           console.error(err)
