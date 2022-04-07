@@ -13,7 +13,7 @@ window.checkedLayers=[2,21,22,3]
 //视频
 window.VUE_APP_TAGCONFIG_PATH = 'ws://***.***.***.***:***'
 //
-window.DATA_PATH="ws://LAPTOP-EBM601UB:8088/"
+window.DATA_PATH="ws://********:8088/"
 //
 window.isPos = true;
 window.start = 0;
