@@ -297,20 +297,6 @@ export default {
     },
     //回放轨迹方法
     guijiMap (val) {
-      const options = {
-        url: "https://js.arcgis.com/3.18/",
-      };
-      //加载arcgis api css文件
-      esriLoader.loadCss("https://js.arcgis.com/3.18/esri/css/esri.css");
-      //加载所需arcgis模块
-      esriLoader
-        .loadModules([
-          "esri/map",
-          "esri/layers/GraphicsLayer",
-          "esri/geometry/Extent",
-          "dojo/domReady!",
-        ])
-        .then(([Map, GraphicsLayer, Extent]) => {
           let map = window.map;
           var carspeed = this.speed > 0 ? 100 / this.speed : 100;
           //var carspeed=50000
@@ -319,7 +305,6 @@ export default {
           var carattr = [carImage, 20, 35];
           var color0 = [0, 255, 0];
           movementInit(map, points0, carspeed, carattr, color0);
-        });
     },
 
   },
